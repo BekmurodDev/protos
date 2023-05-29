@@ -1,0 +1,30 @@
+syntax="proto3";
+
+package user_service;
+option go_package="genproto/user_service";
+
+service UserService{
+    rpc Create(UserCreate) returns(Status);
+};
+
+
+
+message User {
+    int64 id =1;
+    string name = 2;
+    string phone = 3;
+    string gmail = 4;
+    string nicename = 5;
+}
+
+
+message UserCreate {
+    string name = 1;
+    string phone = 2;
+    string gmail = 3;
+    string nicename = 4;
+}
+
+message Status {
+    string done = 1;
+}

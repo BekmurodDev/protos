@@ -1,0 +1,28 @@
+syntax="proto3";
+
+package register_service;
+option go_package="genproto/register_service";
+
+message FirstOpen {
+    string name = 1;
+    string phone = 2;
+    string gmail = 3;
+    string nicename = 4;
+}
+
+message PoneChecker {
+    string session_id = 1;
+    string phone = 2;
+
+}
+
+
+message NoFirstOpen {
+    string name = 1;
+    string phone = 2;
+}
+
+
+
+
+
